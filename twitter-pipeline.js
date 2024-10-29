@@ -57,11 +57,10 @@ async function scrapeDegenSpartanTweets(scraper) {
       width: 30
     });
 
-    // Todo: Need to fetch replies.
     while (true) {
       try {
         const tweetsStream = scraper.getTweets(
-          profile.id,
+          CONFIG.targetAccount,
           CONFIG.twitter.batchSize,
           cursor
         );
